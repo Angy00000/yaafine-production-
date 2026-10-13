@@ -5,12 +5,11 @@ import { useState } from "react";
 import { photos, videos } from "@/content/portfolio";
 import { services } from "@/content/services";
 import { site } from "@/content/site";
-import { MediaFrame } from "./MediaFrame";
+import { PhotoGallery } from "./PhotoGallery";
 import { YouTubeFacade } from "./YouTubeFacade";
 import { PlayIcon } from "./icons";
 
 const serviceName = (slug?: string) => services.find((s) => s.slug === slug)?.title ?? "";
-const ratioOf = { landscape: "3/2", portrait: "4/5", square: "1/1" } as const;
 
 type Tab = "videos" | "photos";
 
@@ -82,22 +81,7 @@ export function Portfolio({ limit, showMoreLink = false }: { limit?: number; sho
 
       {tab === "photos" && (
         <div id="panel-photos" role="tabpanel" aria-labelledby="tab-photos" className="mt-10">
-          {shownPhotos.length === 0 ? (
-            <Empty text="Les photos arrivent bientôt." />
-          ) : (
-            <ul className="columns-2 gap-3 md:columns-3 md:gap-4">
-              {shownPhotos.map((p) => (
-                <li key={p.id} className="mb-3 break-inside-avoid md:mb-4">
-                  <MediaFrame
-                    src={p.src}
-                    alt={p.alt}
-                    ratio={ratioOf[p.orientation]}
-                    sizes="(min-width: 768px) 33vw, 50vw"
-                  />
-                </li>
-              ))}
-            </ul>
-          )}
+          <PhotoGallery photos={shownPhotos} filters={!limit} />
         </div>
       )}
 

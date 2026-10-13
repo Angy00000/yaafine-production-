@@ -13,6 +13,7 @@ export function About() {
             Le regard derrière la caméra
           </h2>
           <p className="mt-6 text-lg leading-relaxed">{about.intro}</p>
+          <p className="mt-4 leading-relaxed text-mist">{about.activities}</p>
           <p className="mt-4 leading-relaxed text-mist">{about.approach}</p>
 
           <div className="mt-10">
@@ -36,8 +37,9 @@ export function About() {
           <div className="viewfinder p-2">
             <span className="vf-corners" aria-hidden />
             <MediaFrame
-              src={about.founderPhoto}
-              alt={`Portrait de ${site.founder}`}
+              src={about.founderPhoto ?? "/media/photos/foot-finale-7e-edition.webp"}
+              alt={about.founderPhoto ? `Portrait de ${site.founder}` : "L'équipe Yaafiné Production lors de la finale de son tournoi de football"}
+              position="58% 50%"
               ratio="4/5"
               sizes="(min-width: 768px) 40vw, 100vw"
             />

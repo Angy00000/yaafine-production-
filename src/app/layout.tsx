@@ -18,6 +18,8 @@ export const metadata: Metadata = {
     "photographe Dakar",
     "photographe Keur Massar",
     "couverture événementielle Dakar",
+    "décoration mariage Dakar",
+    "décoration baptême Keur Massar",
     "réalisation vidéo Sénégal",
     "Yaafiné Production",
   ],

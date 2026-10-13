@@ -1,6 +1,6 @@
 import { site, whatsappLink } from "@/content/site";
 import { QuoteForm } from "./QuoteForm";
-import { MailIcon, WhatsAppIcon } from "./icons";
+import { MailIcon, PhoneIcon, WhatsAppIcon } from "./icons";
 
 export function Contact() {
   const { contact } = site;
@@ -40,6 +40,15 @@ export function Contact() {
                 <span>
                   <span className="block text-mist">Second numéro WhatsApp</span>
                   {contact.whatsappSecondaryLabel}
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href={`tel:+${contact.phone}`} className="flex items-center gap-3 hover:text-electric-2">
+                <PhoneIcon className="h-5 w-5 text-mist" />
+                <span>
+                  <span className="block text-mist">Téléphone (réservations)</span>
+                  {contact.phoneLabel}
                 </span>
               </a>
             </li>

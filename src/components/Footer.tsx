@@ -10,7 +10,7 @@ export function Footer() {
         <div>
           <Logo size={88} showName={false} />
           <p className="mt-4 max-w-xs text-sm text-mist">
-            {site.name}, label audiovisuel à {site.city}. Couverture événementielle, réalisation vidéo et photographie.
+            {site.name}, label audiovisuel à {site.city}. Couverture événementielle, réalisation vidéo, photographie et décoration.
           </p>
         </div>
 
@@ -32,6 +32,9 @@ export function Footer() {
           </a>
           <a href={whatsappLink(undefined, site.contact.whatsappSecondary)} target="_blank" rel="noopener noreferrer" className="block text-mist hover:text-paper">
             WhatsApp {site.contact.whatsappSecondaryLabel}
+          </a>
+          <a href={`tel:+${site.contact.phone}`} className="block text-mist hover:text-paper">
+            Tél. {site.contact.phoneLabel}
           </a>
           <a href={`mailto:${site.contact.email}`} className="block text-mist hover:text-paper">
             {site.contact.email}

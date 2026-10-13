@@ -9,10 +9,10 @@ export function Services() {
       <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 sm:py-32">
       <div className="max-w-2xl">
         <h2 id="services-title" className="section-title text-4xl sm:text-5xl">
-          Trois métiers, une même exigence d&apos;image
+          Quatre métiers, une même exigence d&apos;image
         </h2>
         <p className="mt-4 text-mist sm:text-lg">
-          Que vous organisiez une cérémonie, lanciez un produit ou ayez besoin de photos, nous nous occupons des images de bout en bout.
+          Que vous organisiez un mariage, une cérémonie ou un tournoi, nous nous occupons du décor comme des images, de bout en bout.
         </p>
       </div>
 
@@ -26,7 +26,7 @@ export function Services() {
           >
             <div className={`viewfinder p-2 md:col-span-7 ${i % 2 ? "md:order-2" : ""}`}>
               <span className="vf-corners" aria-hidden />
-              <MediaFrame src={s.image} alt={s.imageAlt} ratio="3/2" sizes="(min-width: 768px) 55vw, 100vw" />
+              <MediaFrame src={s.image} alt={s.imageAlt} position={s.imagePosition} ratio="3/2" sizes="(min-width: 768px) 55vw, 100vw" />
             </div>
 
             <div className="md:col-span-5">

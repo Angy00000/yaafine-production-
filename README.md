@@ -20,7 +20,7 @@ Tout est dans `src/content/` :
 | Fichier | Contenu |
 | --- | --- |
 | `site.ts` | Nom, logo, image d'accueil, téléphones, e-mail, réseaux sociaux, domaine |
-| `services.ts` | Les 3 prestations et leurs photos |
+| `services.ts` | Les 4 prestations et leurs photos |
 | `portfolio.ts` | Vidéos YouTube et photos des réalisations |
 | `about.ts` | Présentation, biographie et photo du fondateur |
 

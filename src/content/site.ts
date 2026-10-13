@@ -29,7 +29,7 @@ export const site = {
   // Remplace par le vrai domaine dès qu'il existe (ex. https://yaafine.sn)
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://yaafine-production.vercel.app",
   description:
-    "Yaafiné Production, label audiovisuel basé à Keur Massar : couverture événementielle, réalisation vidéo et photographie à Keur Massar et Dakar, Sénégal.",
+    "Yaafiné Production, label audiovisuel basé à Keur Massar : couverture événementielle, réalisation vidéo, photographie et décoration d'événements à Keur Massar et Dakar, Sénégal.",
 
   contact: {
     // Format international sans espaces ni « + », utilisé pour les liens WhatsApp
@@ -37,6 +37,9 @@ export const site = {
     whatsappSecondary: "221779620568",
     whatsappPrimaryLabel: "+221 77 059 31 18",
     whatsappSecondaryLabel: "+221 77 962 05 68",
+    /** Numéro indiqué sur les flyers (réservations) */
+    phone: "221754422941",
+    phoneLabel: "+221 75 442 29 41",
     email: "teleyaafine@gmail.com",
   },
 

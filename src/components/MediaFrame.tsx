@@ -5,6 +5,8 @@ type Props = {
   alt: string;
   /** ratio CSS, ex. "16/9" */
   ratio?: string;
+  /** partie de l'image à garder visible au recadrage, ex. "50% 30%" */
+  position?: string;
   sizes?: string;
   priority?: boolean;
   className?: string;
@@ -14,11 +16,11 @@ type Props = {
  * Image du site. Si aucune image n'est encore fournie, affiche un cadre
  * clairement marqué « à remplacer » au lieu d'une fausse photo.
  */
-export function MediaFrame({ src, alt, ratio = "16/9", sizes = "100vw", priority, className = "" }: Props) {
+export function MediaFrame({ src, alt, ratio = "16/9", position, sizes = "100vw", priority, className = "" }: Props) {
   return (
     <div className={`relative overflow-hidden bg-navy ${className}`} style={{ aspectRatio: ratio }}>
       {src ? (
-        <Image src={src} alt={alt} fill sizes={sizes} priority={priority} className="object-cover" />
+        <Image src={src} alt={alt} fill sizes={sizes} priority={priority} className="object-cover" style={position ? { objectPosition: position } : undefined} />
       ) : (
         <div
           role="img"
