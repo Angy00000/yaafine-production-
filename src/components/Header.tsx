@@ -39,7 +39,7 @@ export function Header() {
             href={whatsappLink("Bonjour Yaafiné Production, je souhaite un renseignement.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center gap-2 rounded-full bg-electric px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-electric-2 sm:inline-flex"
+            className="hidden items-center gap-2 rounded-full bg-electric px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-electric-hover sm:inline-flex"
           >
             <WhatsAppIcon className="h-4 w-4" />
             WhatsApp

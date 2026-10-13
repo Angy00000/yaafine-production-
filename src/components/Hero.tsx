@@ -40,7 +40,7 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/#contact"
-              className="rounded-full bg-electric px-6 py-3.5 font-semibold text-white transition-colors hover:bg-electric-2"
+              className="rounded-full bg-electric px-6 py-3.5 font-semibold text-white transition-colors hover:bg-electric-hover"
             >
               Demander un devis
             </Link>

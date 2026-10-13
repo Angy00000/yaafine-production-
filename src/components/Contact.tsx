@@ -19,7 +19,7 @@ export function Contact() {
             href={whatsappLink("Bonjour Yaafiné Production, je souhaite un renseignement.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 flex items-center gap-3 rounded-md bg-electric p-4 text-white transition-colors hover:bg-electric-2"
+            className="mt-8 flex items-center gap-3 rounded-md bg-electric p-4 text-white transition-colors hover:bg-electric-hover"
           >
             <WhatsAppIcon className="h-7 w-7 shrink-0" />
             <span>

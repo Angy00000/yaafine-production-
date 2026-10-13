@@ -26,7 +26,7 @@ Tout est dans `src/content/` :
 
 Les images vont dans `public/media/` (photos en JPG/WebP, 1600–2000 px de large maximum).
 
-- **Logo** : déposer `public/logo.svg` (ou `.png`), puis `logo: "/logo.svg"` dans `site.ts`. Remplacer aussi `src/app/icon.svg` (favicon provisoire).
+- **Logo** : `public/logo.png` (pastille ronde, fond transparent). Original en pleine taille dans `assets/`. Favicon, icône Apple et image de partage générées dans `src/app/`.
 - **Vidéo** : dans `portfolio.ts`, mettre l'identifiant YouTube dans `youtubeId`, un vrai titre, et `demo: false`.
 - Tant qu'un contenu manque, le site affiche un cadre « Exemple — à remplacer ».
 

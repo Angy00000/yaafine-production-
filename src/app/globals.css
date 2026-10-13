@@ -1,12 +1,13 @@
 @import "tailwindcss";
 @import "@fontsource-variable/archivo/wdth.css";
 
-/* Charte Yaafiné Production — à ajuster sur les couleurs exactes du logo */
+/* Charte Yaafiné Production, couleurs relevées sur le logo officiel */
 @theme {
   --color-ink: #040a1c;       /* fond cinéma, bleu presque noir */
-  --color-navy: #0a1a44;      /* bleu marine */
+  --color-navy: #071a4f;      /* bleu marine (logo : #002174) */
   --color-navy-2: #12285f;    /* surfaces */
-  --color-electric: #2f6bff;  /* bleu électrique, accent principal */
+  --color-electric: #0050c6;  /* bleu électrique du logo */
+  --color-electric-hover: #1f66e6; /* survol des boutons */
   --color-electric-2: #6f98ff;/* bleu électrique lisible sur fond sombre */
   --color-paper: #f3f6ff;     /* blanc */
   --color-mist: #a3b1d6;      /* texte secondaire */

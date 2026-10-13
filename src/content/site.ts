@@ -15,7 +15,7 @@ export const site = {
    * Logo officiel : dépose le fichier dans /public (ex. /logo.svg ou /logo.png)
    * et indique son chemin ici. Tant que c'est null, le nom s'affiche en texte.
    */
-  logo: null as string | null,
+  logo: "/logo.png" as string | null,
   /** Grande image de fond de l'accueil (ex. /media/hero.jpg, 1920 px de large), ou null */
   heroImage: null as string | null,
   // Remplace par le vrai domaine dès qu'il existe (ex. https://yaafine.sn)

@@ -42,7 +42,7 @@ export function Services() {
                 href={whatsappLink(`Bonjour Yaafiné Production, je souhaite un devis pour : ${s.title}.`)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-electric px-5 py-3 font-semibold text-white transition-colors hover:bg-electric-2"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-electric px-5 py-3 font-semibold text-white transition-colors hover:bg-electric-hover"
               >
                 <WhatsAppIcon className="h-5 w-5" />
                 Demander un devis

@@ -8,8 +8,8 @@ export function Footer() {
     <footer className="border-t border-white/10">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
         <div>
-          <Logo />
-          <p className="mt-3 max-w-xs text-sm text-mist">
+          <Logo size={88} showName={false} />
+          <p className="mt-4 max-w-xs text-sm text-mist">
             {site.name}, label audiovisuel à {site.city}. Couverture événementielle, réalisation vidéo et photographie.
           </p>
         </div>

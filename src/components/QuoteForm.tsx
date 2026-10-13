@@ -109,7 +109,7 @@ export function QuoteForm() {
       <div className="sm:col-span-2">
         <button
           type="submit"
-          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-electric px-6 py-4 font-semibold text-white transition-colors hover:bg-electric-2 sm:w-auto"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-electric px-6 py-4 font-semibold text-white transition-colors hover:bg-electric-hover sm:w-auto"
         >
           <WhatsAppIcon className="h-5 w-5" />
           Envoyer ma demande sur WhatsApp
