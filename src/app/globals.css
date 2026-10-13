@@ -106,7 +106,17 @@ body {
   animation: rec-blink 1.4s steps(1) infinite;
 }
 
+/* Zoom lent du diaporama d'accueil */
+.hero-kenburns {
+  transform: scale(1.04);
+  transition: transform 9s ease-out;
+}
+.hero-kenburns.is-active {
+  transform: scale(1.14);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .hero-kenburns, .hero-kenburns.is-active { transform: none; transition: none; }
   .rec-dot { animation: none; }
 }

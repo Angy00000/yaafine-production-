@@ -16,8 +16,18 @@ export const site = {
    * et indique son chemin ici. Tant que c'est null, le nom s'affiche en texte.
    */
   logo: "/logo.png" as string | null,
-  /** Grande image de fond de l'accueil (ex. /media/hero.jpg, 1920 px de large), ou null */
-  heroImage: null as string | null,
+  /**
+   * Diaporama de fond de l'accueil (fondu enchaîné). Images dans /public/media/hero/.
+   * `position` : partie de l'image à garder visible quand elle est recadrée
+   * (ex. "center", "30% 50%"). Liste vide = fond bleu nuit uni.
+   */
+  heroSlides: [
+    { src: "/media/hero/objectif.webp", position: "50% 55%" },
+    { src: "/media/hero/clap-pellicule.webp", position: "30% 50%" },
+    // Désactivée : affiche des affiches et marques de films connus (Star Wars, Jaws…),
+    // à ne publier qu'avec l'accord du client et en connaissance des droits.
+    // { src: "/media/hero/histoire-cinema.webp", position: "50% 35%" },
+  ] as { src: string; position?: string }[],
   // Remplace par le vrai domaine dès qu'il existe (ex. https://yaafine.sn)
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://yaafine-production.vercel.app",
   description:
