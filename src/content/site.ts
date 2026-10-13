@@ -44,7 +44,7 @@ export const site = {
    * Réseaux sociaux : ajoute uniquement des URL confirmées par le client.
    * Exemple : { label: "Instagram", href: "https://instagram.com/..." }
    */
-  socials: [] as { label: string; href: string }[],
+  socials: [{ label: "YouTube", href: "https://www.youtube.com/@yaafinetv" }] as { label: string; href: string }[],
 } as const;
 
 export const nav = [
