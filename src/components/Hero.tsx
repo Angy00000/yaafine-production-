@@ -2,20 +2,12 @@ import Link from "next/link";
 import { site } from "@/content/site";
 import { services } from "@/content/services";
 import { Timecode } from "./Timecode";
-import { HeroSlideshow } from "./HeroSlideshow";
 
 export function Hero() {
   return (
     <section id="accueil" aria-labelledby="hero-title" className="px-3 pt-19 pb-3 sm:px-5 sm:pb-5">
       <div className="viewfinder isolate flex min-h-[calc(100svh-5.5rem)] flex-col overflow-hidden">
         <span className="vf-corners" aria-hidden />
-
-        {/* Fond : diaporama, ou ambiance bleu nuit si aucune image */}
-        {site.heroSlides.length > 0 ? (
-          <HeroSlideshow slides={site.heroSlides} />
-        ) : (
-          <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_70%_20%,#16357f_0%,#0a1a44_40%,#040a1c_80%)]" />
-        )}
 
         {/* Bandeau caméra */}
         <div className="flex items-center justify-between px-5 pt-5 text-xs text-mist sm:px-8 sm:pt-7 sm:text-sm">
@@ -49,7 +41,7 @@ export function Hero() {
             </Link>
           </div>
 
-          <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2 border-t border-white/15 pt-5 pr-28 text-sm text-mist">
+          <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2 border-t border-white/15 pt-5 text-sm text-mist">
             {services.map((s) => (
               <li key={s.slug}>
                 <Link href={`/#${s.slug}`} className="hover:text-paper">

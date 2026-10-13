@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Hero />
       <Services />
-      <section id="realisations" aria-labelledby="work-title" className="border-y border-white/10 bg-black/30">
+      <section id="realisations" aria-labelledby="work-title" className="border-y border-white/10 bg-ink/60">
         <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 sm:py-32">
           <h2 id="work-title" className="section-title mb-10 max-w-2xl text-4xl sm:text-5xl">
             Nos réalisations

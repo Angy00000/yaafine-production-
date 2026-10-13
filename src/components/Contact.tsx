@@ -5,8 +5,8 @@ import { MailIcon, WhatsAppIcon } from "./icons";
 export function Contact() {
   const { contact } = site;
   return (
-    <section id="contact" aria-labelledby="contact-title" className="mx-auto max-w-6xl px-4 py-24 sm:px-6 sm:py-32">
-      <div className="grid gap-14 md:grid-cols-12">
+    <section id="contact" aria-labelledby="contact-title" className="bg-ink/80">
+      <div className="mx-auto grid max-w-6xl gap-14 px-4 py-24 sm:px-6 sm:py-32 md:grid-cols-12">
         <div className="md:col-span-4">
           <h2 id="contact-title" className="section-title text-4xl sm:text-5xl">
             Parlons de votre projet

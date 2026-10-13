@@ -3,6 +3,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { site } from "@/content/site";
+import { BackgroundSlideshow } from "@/components/BackgroundSlideshow";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -70,11 +71,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Aller au contenu
         </a>
+        <BackgroundSlideshow slides={site.heroSlides} />
         <Header />
-        <main id="contenu" className="flex-1">
+        <main id="contenu" className="relative z-10 flex-1">
           {children}
         </main>
-        <Footer />
+        <div className="relative z-10">
+          <Footer />
+        </div>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}

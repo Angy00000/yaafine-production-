@@ -6,7 +6,7 @@ export function About() {
   const hasBio = about.founderBio.length > 0;
 
   return (
-    <section id="a-propos" aria-labelledby="about-title" className="bg-navy">
+    <section id="a-propos" aria-labelledby="about-title" className="bg-navy/80">
       <div className="mx-auto grid max-w-6xl gap-12 px-4 py-24 sm:px-6 sm:py-32 md:grid-cols-12">
         <div className="md:col-span-7">
           <h2 id="about-title" className="section-title text-4xl sm:text-5xl">

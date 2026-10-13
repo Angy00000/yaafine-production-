@@ -5,7 +5,8 @@ import { WhatsAppIcon } from "./icons";
 
 export function Services() {
   return (
-    <section id="services" aria-labelledby="services-title" className="mx-auto max-w-6xl px-4 py-24 sm:px-6 sm:py-32">
+    <section id="services" aria-labelledby="services-title" className="bg-ink/75">
+      <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 sm:py-32">
       <div className="max-w-2xl">
         <h2 id="services-title" className="section-title text-4xl sm:text-5xl">
           Trois métiers, une même exigence d&apos;image
@@ -50,6 +51,7 @@ export function Services() {
             </div>
           </article>
         ))}
+      </div>
       </div>
     </section>
   );

@@ -5,7 +5,7 @@ import { Year } from "./Year";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10">
+    <footer className="border-t border-white/10 bg-ink/90">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
         <div>
           <Logo size={88} showName={false} />
