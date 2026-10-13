@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Yaafiné Production — site vitrine
 
-## Getting Started
+Site du label audiovisuel Yaafiné Production (Keur Massar, Dakar) : couverture événementielle, réalisation vidéo, photographie.
 
-First, run the development server:
+Stack : Next.js 16, TypeScript, Tailwind CSS 4. Site 100 % statique, hébergeable gratuitement sur Vercel.
+
+## Lancer en local
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Vérifications : `npm run lint`, `npm run typecheck`, `npm run build`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Modifier le contenu (sans toucher au design)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Tout est dans `src/content/` :
 
-## Learn More
+| Fichier | Contenu |
+| --- | --- |
+| `site.ts` | Nom, logo, image d'accueil, téléphones, e-mail, réseaux sociaux, domaine |
+| `services.ts` | Les 3 prestations et leurs photos |
+| `portfolio.ts` | Vidéos YouTube et photos des réalisations |
+| `about.ts` | Présentation, biographie et photo du fondateur |
 
-To learn more about Next.js, take a look at the following resources:
+Les images vont dans `public/media/` (photos en JPG/WebP, 1600–2000 px de large maximum).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Logo** : déposer `public/logo.svg` (ou `.png`), puis `logo: "/logo.svg"` dans `site.ts`. Remplacer aussi `src/app/icon.svg` (favicon provisoire).
+- **Vidéo** : dans `portfolio.ts`, mettre l'identifiant YouTube dans `youtubeId`, un vrai titre, et `demo: false`.
+- Tant qu'un contenu manque, le site affiche un cadre « Exemple — à remplacer ».
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Formulaire de devis
 
-## Deploy on Vercel
+Pas de serveur : le formulaire vérifie les champs, puis ouvre WhatsApp avec la demande déjà rédigée vers le numéro principal. Le visiteur appuie sur Envoyer dans WhatsApp. Aucun coût, aucune clé secrète.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Déploiement (Vercel, gratuit)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. vercel.com → Add New → Project → importer ce dépôt GitHub.
+2. Laisser les réglages par défaut (Next.js détecté automatiquement) → Deploy.
+3. Facultatif : variable `NEXT_PUBLIC_SITE_URL` = le domaine final (ex. `https://yaafine.sn`), puis Settings → Domains.
+
+Chaque `git push` sur `main` redéploie automatiquement.
+
+## Structure
+
+```
+src/app/            pages (accueil, /realisations), SEO (sitemap, robots, favicon)
+src/components/     sections et éléments réutilisables
+src/content/        contenus modifiables
+public/media/       images
+```

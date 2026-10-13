@@ -1,26 +1,111 @@
 @import "tailwindcss";
+@import "@fontsource-variable/archivo/wdth.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Charte Yaafiné Production — à ajuster sur les couleurs exactes du logo */
+@theme {
+  --color-ink: #040a1c;       /* fond cinéma, bleu presque noir */
+  --color-navy: #0a1a44;      /* bleu marine */
+  --color-navy-2: #12285f;    /* surfaces */
+  --color-electric: #2f6bff;  /* bleu électrique, accent principal */
+  --color-electric-2: #6f98ff;/* bleu électrique lisible sur fond sombre */
+  --color-paper: #f3f6ff;     /* blanc */
+  --color-mist: #a3b1d6;      /* texte secondaire */
+  --color-rec: #ff4040;       /* voyant d'enregistrement */
+
+  --font-sans: "Archivo Variable", system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Titres larges : la typographie « générique de film » du site */
+.display {
+  font-stretch: 125%;
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.section-title {
+  font-stretch: 112%;
+  font-weight: 750;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-electric-2);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Coins de viseur réutilisables */
+.viewfinder {
+  position: relative;
+}
+.viewfinder::before,
+.viewfinder::after {
+  content: "";
+  position: absolute;
+  width: clamp(18px, 4vw, 40px);
+  height: clamp(18px, 4vw, 40px);
+  border-color: var(--color-paper);
+  border-style: solid;
+  opacity: 0.85;
+  pointer-events: none;
+}
+.viewfinder::before {
+  top: 0;
+  left: 0;
+  border-width: 2px 0 0 2px;
+}
+.viewfinder::after {
+  bottom: 0;
+  right: 0;
+  border-width: 0 2px 2px 0;
+}
+.viewfinder > .vf-corners::before,
+.viewfinder > .vf-corners::after {
+  content: "";
+  position: absolute;
+  width: clamp(18px, 4vw, 40px);
+  height: clamp(18px, 4vw, 40px);
+  border-color: var(--color-paper);
+  border-style: solid;
+  opacity: 0.85;
+  pointer-events: none;
+}
+.viewfinder > .vf-corners::before {
+  top: 0;
+  right: 0;
+  border-width: 2px 2px 0 0;
+}
+.viewfinder > .vf-corners::after {
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 2px 2px;
+}
+
+@keyframes rec-blink {
+  0%, 55% { opacity: 1; }
+  56%, 100% { opacity: 0.2; }
+}
+.rec-dot {
+  animation: rec-blink 1.4s steps(1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .rec-dot { animation: none; }
 }
