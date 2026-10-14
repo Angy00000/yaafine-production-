@@ -15,7 +15,7 @@ export const about = {
     nickname: "Moussa Yaafiné",
     role: "Fondateur et gérant de Yaafiné Production",
     // Chemin d'une photo du fondateur dans /public, ou null (photo d'équipe affichée)
-    photo: null as string | null,
+    photo: "/media/photos/moussa-yaafine-portrait.webp" as string | null,
   },
 
   /** Les premiers paragraphes sont visibles, la suite s'ouvre avec « Lire toute son histoire ». */
@@ -33,6 +33,13 @@ export const about = {
     "Yaafiné Production, c'est bien plus qu'une entreprise de production audiovisuelle, événementielle et de communication. C'est ma réponse à la vie. Avec pour devise « Capturer vos plus beaux moments », je mets mon objectif et mon micro au service des autres.",
     "Depuis 9 ans, j'organise avec mon équipe le Tournoi de football Jeunesse de Malika, qui rassemble aujourd'hui plus de 500 jeunes.",
   ],
+  /** Photo sur scène, affichée dans l'histoire juste après le paragraphe sur la musique */
+  stagePhoto: {
+    src: "/media/photos/moussa-yaafine-scene.webp",
+    alt: "Moussa Yaafiné sur scène, micro en main, sous les projecteurs",
+    credit: "Photo : Vision'Art",
+    afterParagraph: 3,
+  },
   mission: [
     "Sensibiliser plus de 500 jeunes à la discipline, la santé, l'éducation et la citoyenneté",
     "Lutter contre l'oisiveté, l'abandon scolaire et la délinquance juvénile",

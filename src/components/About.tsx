@@ -36,8 +36,19 @@ export function About() {
                 <span aria-hidden className="transition-transform group-open:rotate-180">⌄</span>
               </summary>
               <div className="mt-6 space-y-4 leading-relaxed text-paper/90">
-                {about.bioMore.map((p) => (
-                  <p key={p.slice(0, 32)}>{p}</p>
+                {about.bioMore.map((p, i) => (
+                  <div key={p.slice(0, 32)} className="space-y-4">
+                    <p>{p}</p>
+                    {about.stagePhoto && i === about.stagePhoto.afterParagraph && (
+                      <figure className="py-4">
+                        <div className="viewfinder p-2 sm:max-w-sm">
+                          <span className="vf-corners" aria-hidden />
+                          <MediaFrame src={about.stagePhoto.src} alt={about.stagePhoto.alt} ratio="4/5" position="50% 30%" sizes="(min-width: 640px) 384px, 100vw" />
+                        </div>
+                        <figcaption className="mt-2 text-xs text-mist">{about.stagePhoto.credit}</figcaption>
+                      </figure>
+                    )}
+                  </div>
                 ))}
 
                 <h4 className="pt-4 text-lg font-bold [font-stretch:112%]">Sa mission</h4>
@@ -60,7 +71,7 @@ export function About() {
               <MediaFrame
                 src={founder.photo ?? "/media/photos/foot-finale-7e-edition.webp"}
                 alt={founder.photo ? `Portrait de ${founder.name}` : "L'équipe Yaafiné Production lors de la finale du Tournoi de football Jeunesse de Malika"}
-                position="58% 50%"
+                position={founder.photo ? "50% 30%" : "58% 50%"}
                 ratio="4/5"
                 sizes="(min-width: 768px) 40vw, 100vw"
               />
