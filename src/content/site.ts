@@ -9,6 +9,8 @@ export const site = {
   shortName: "Yaafiné Prod",
   founder: "Elhadji Moussa Watt",
   city: "Keur Massar",
+  /** Quartier, d'après la biographie officielle */
+  district: "Malika Cité Sonatel",
   region: "Dakar",
   country: "Sénégal",
   /**

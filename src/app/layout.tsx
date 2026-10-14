@@ -52,9 +52,10 @@ const jsonLd = {
   url: site.url,
   email: site.contact.email,
   telephone: site.contact.whatsappPrimaryLabel.replace(/\s/g, ""),
-  founder: { "@type": "Person", name: site.founder },
+  founder: { "@type": "Person", name: site.founder, alternateName: "Moussa Yaafiné" },
   address: {
     "@type": "PostalAddress",
+    streetAddress: site.district,
     addressLocality: site.city,
     addressRegion: site.region,
     addressCountry: "SN",

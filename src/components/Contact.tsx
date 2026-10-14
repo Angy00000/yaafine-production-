@@ -63,7 +63,7 @@ export function Contact() {
             </li>
           </ul>
           <p className="mt-6 text-sm text-mist">
-            Basés à {site.city}, région de {site.region}, {site.country}.
+            Basés à {site.district}, {site.city}, région de {site.region}.
           </p>
         </div>
 
